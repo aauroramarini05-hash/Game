@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>xDustAtom City — Advanced 3D Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="introOverlay" class="overlay visible">
+    <div class="intro-card">
+      <h1 id="introTitle">xDustAtom Present</h1>
+      <p id="introSubtitle">Caricamento città 3D avanzata…</p>
+      <div class="loader"><span></span></div>
+      <button id="startButton">Avvia</button>
+    </div>
+  </div>
+
+  <div id="hud" class="hud">
+    <div class="panel">
+      <h2 id="uiTitle">Impostazioni Avanzate</h2>
+      <label>
+        <span id="langLabel">Lingua</span>
+        <select id="languageSelect">
+          <option value="it">Italiano</option>
+          <option value="en">English</option>
+        </select>
+      </label>
+
+      <label>
+        <span id="fpsLabel">Limite FPS</span>
+        <input type="range" id="fpsCap" min="24" max="144" step="1" value="60" />
+        <strong id="fpsCapValue">60</strong>
+      </label>
+
+      <label>
+        <span id="qualityLabel">Qualità</span>
+        <select id="qualitySelect">
+          <option value="high">Alta</option>
+          <option value="medium">Media</option>
+          <option value="low">Bassa</option>
+        </select>
+      </label>
+
+      <label>
+        <span id="dayNightLabel">Ciclo Giorno/Notte</span>
+        <input type="checkbox" id="dayNightToggle" checked />
+      </label>
+
+      <label>
+        <span id="trafficLabel">Traffico Dinamico</span>
+        <input type="checkbox" id="trafficToggle" checked />
+      </label>
+
+      <button id="resetCamera">Reset Camera</button>
+    </div>
+
+    <div class="panel stats">
+      <div><span id="fpsNowLabel">FPS attuali</span>: <strong id="fpsNow">0</strong></div>
+      <div><span id="cityTimeLabel">Ora città</span>: <strong id="cityTime">12:00</strong></div>
+      <div><span id="entitiesLabel">Entità animate</span>: <strong id="entityCount">0</strong></div>
+      <p id="hint">WASD + mouse per muoverti</p>
+    </div>
+  </div>
+
+  <canvas id="scene"></canvas>
+
+  <script type="module" src="game.js"></script>
+</body>
+</html>
