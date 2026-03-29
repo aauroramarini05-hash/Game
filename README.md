@@ -1,13 +1,15 @@
-# xDustAtom HyperCity 3D
+# xDustAtom HyperCity 3D (Extreme Edition)
 
-Gioco web 3D avanzato e ottimizzato per desktop + telefono:
+Versione molto più avanzata con asset 3D reali e look realistico:
 - Intro cinematica "xDustAtom Present"
-- Città molto più densa con edifici, strade, corsie e traffico dinamico
-- Pedoni animati (NPC) con movimento autonomo
-- Meccaniche guida avanzate (accelerazione progressiva, freno, nitro, 3 modalità camera)
-- HUD completo (velocità, FPS, punteggio guida)
-- UI impostazioni avanzata: lingua, limite FPS, qualità luci, ombre, traffico auto, pedoni, toggle comandi touch
-- Controlli touch mobile (direzioni, freno, nitro)
+- Veicoli reali (ToyCar glTF) sia per il player che per il traffico
+- Persone reali animate (Soldier glTF con animation mixer)
+- Blocchi città reali aggiuntivi (LittlestTokyo glTF) oltre a rete stradale estesa
+- Texture reali su terreno/strade e illuminazione dinamica
+- Meccaniche avanzate: accelerazione progressiva, freno, nitro, 3 camere, punteggio guida
+- UI/HUD avanzata con impostazioni, limite FPS, densità traffico/pedoni, toggle touch
+- Bottone per chiudere il pannello impostazioni
+- Ottimizzazione browser telefono con comandi touch
 
 ## Avvio server locale
 
@@ -15,8 +17,10 @@ Gioco web 3D avanzato e ottimizzato per desktop + telefono:
 node server.js
 ```
 
-Apri il gioco su:
+Apri su:
 
 - http://localhost:5173
 
-> Nota: Three.js è caricato via CDN.
+## Note
+
+Gli asset 3D e texture vengono caricati via URL esterni (CDN/repository pubblici), quindi serve connessione internet.

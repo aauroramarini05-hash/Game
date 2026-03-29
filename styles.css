@@ -77,6 +77,18 @@ button {
 }
 .panel label { display: grid; gap: .2rem; }
 
+.panel-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#settingsClose {
+  padding: .25rem .55rem;
+  min-height: 34px;
+}
+
+
 .touch-ui {
   position: fixed;
   inset: auto .7rem max(14px, env(safe-area-inset-bottom)) .7rem;
