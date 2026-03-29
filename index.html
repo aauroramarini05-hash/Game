@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>xDustAtom City 3D</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="intro" class="overlay visible">
+    <h1>xDustAtom Present</h1>
+    <p id="introSubtitle">Neon City Protocol</p>
+    <button id="startBtn">Avvia esperienza</button>
+  </div>
+
+  <div id="hud" class="hidden">
+    <div class="hud-left">
+      <strong>xDustAtom City</strong>
+      <span id="speed">Speed: 0 km/h</span>
+      <span id="fps">FPS: --</span>
+    </div>
+    <button id="settingsToggle">⚙️</button>
+  </div>
+
+  <aside id="settings" class="panel hidden">
+    <h2 id="settingsTitle">Impostazioni</h2>
+
+    <label>
+      <span id="langLabel">Lingua</span>
+      <select id="language">
+        <option value="it">Italiano</option>
+        <option value="en">English</option>
+      </select>
+    </label>
+
+    <label>
+      <span id="fpsLabel">Limite FPS</span>
+      <input id="fpsLimit" type="range" min="30" max="165" step="5" value="60" />
+      <small id="fpsLimitValue">60</small>
+    </label>
+
+    <label>
+      <span id="qualityLabel">Qualità luci</span>
+      <select id="quality">
+        <option value="low">Low</option>
+        <option value="medium" selected>Medium</option>
+        <option value="ultra">Ultra</option>
+      </select>
+    </label>
+
+    <label>
+      <span id="shadowLabel">Ombre</span>
+      <input id="shadows" type="checkbox" checked />
+    </label>
+
+    <label>
+      <span id="trafficLabel">Densità traffico</span>
+      <input id="traffic" type="range" min="8" max="60" step="1" value="20" />
+      <small id="trafficValue">20</small>
+    </label>
+
+    <p id="controlsText">WASD / Frecce per guidare, mouse per visuale.</p>
+  </aside>
+
+  <canvas id="gameCanvas"></canvas>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
