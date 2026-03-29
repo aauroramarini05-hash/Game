@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>xDustAtom HyperCity 3D</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="intro" class="overlay visible">
+    <h1>xDustAtom Present</h1>
+    <p id="introSubtitle">HyperCity: Urban Pulse</p>
+    <button id="startBtn">Avvia esperienza</button>
+  </div>
+
+  <div id="hud" class="hidden">
+    <div class="hud-left">
+      <strong>xDustAtom HyperCity</strong>
+      <span id="speed">Velocità: 0 km/h</span>
+      <span id="fps">FPS: --</span>
+      <span id="score">Punti guida: 0</span>
+    </div>
+    <div class="hud-right">
+      <button id="camBtn">🎥 Camera</button>
+      <button id="settingsToggle">⚙️</button>
+    </div>
+  </div>
+
+  <aside id="settings" class="panel hidden">
+    <div class="panel-head">
+      <h2 id="settingsTitle">Impostazioni avanzate</h2>
+      <button id="settingsClose" aria-label="Chiudi impostazioni">✕</button>
+    </div>
+
+    <label>
+      <span id="langLabel">Lingua</span>
+      <select id="language">
+        <option value="it">Italiano</option>
+        <option value="en">English</option>
+      </select>
+    </label>
+
+    <label>
+      <span id="fpsLabel">Limite FPS</span>
+      <input id="fpsLimit" type="range" min="30" max="165" step="5" value="60" />
+      <small id="fpsLimitValue">60</small>
+    </label>
+
+    <label>
+      <span id="qualityLabel">Qualità luci</span>
+      <select id="quality">
+        <option value="low">Low</option>
+        <option value="medium" selected>Medium</option>
+        <option value="ultra">Ultra</option>
+      </select>
+    </label>
+
+    <label>
+      <span id="shadowLabel">Ombre</span>
+      <input id="shadows" type="checkbox" checked />
+    </label>
+
+    <label>
+      <span id="trafficLabel">Traffico auto</span>
+      <input id="traffic" type="range" min="10" max="90" step="1" value="36" />
+      <small id="trafficValue">36</small>
+    </label>
+
+    <label>
+      <span id="pedLabel">Pedoni</span>
+      <input id="pedestrians" type="range" min="8" max="70" step="1" value="28" />
+      <small id="pedValue">28</small>
+    </label>
+
+    <label>
+      <span id="mobileLabel">Comandi touch</span>
+      <input id="mobileHud" type="checkbox" checked />
+    </label>
+
+    <p id="controlsText">WASD / Frecce per guidare, Shift nitro, mouse per visuale.</p>
+  </aside>
+
+  <div id="mobileControls" class="touch-ui hidden">
+    <div class="left-pad">
+      <button data-key="left">◀</button>
+      <button data-key="up">▲</button>
+      <button data-key="down">▼</button>
+      <button data-key="right">▶</button>
+    </div>
+    <div class="right-pad">
+      <button data-key="brake">BRAKE</button>
+      <button data-key="nitro">NITRO</button>
+    </div>
+  </div>
+
+  <canvas id="gameCanvas"></canvas>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
