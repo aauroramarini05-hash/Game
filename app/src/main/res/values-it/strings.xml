@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">xDustAtom Città 3D</string>
+    <string name="intro_text">xDustAtom Presenta</string>
+    <string name="fps_limit">Limite FPS</string>
+    <string name="language">Lingua</string>
+    <string name="lang_en">Inglese</string>
+    <string name="lang_it">Italiano</string>
+    <string name="settings">Impostazioni</string>
+    <string name="fps_value">FPS: %1$d</string>
+    <string name="fps_placeholder">FPS: --</string>
+</resources>
