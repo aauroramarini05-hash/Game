@@ -11,8 +11,8 @@ android {
         applicationId = "com.xdustatom.city3d"
         minSdk = 24
         targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 133005001
+        versionName = "1.330.05_001"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
