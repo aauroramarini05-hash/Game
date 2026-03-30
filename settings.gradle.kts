@@ -14,5 +14,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "xDustAtomCity3D"
+rootProject.name = "AuryxEditor"
 include(":app")
