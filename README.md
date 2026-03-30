@@ -1,26 +1,34 @@
-# xDustAtom HyperCity 3D (Extreme Edition)
+# AuryxEditor (Android)
 
-Versione molto più avanzata con asset 3D reali e look realistico:
-- Intro cinematica "xDustAtom Present"
-- Veicoli reali (ToyCar glTF) sia per il player che per il traffico
-- Persone reali animate (Soldier glTF con animation mixer)
-- Blocchi città reali aggiuntivi (LittlestTokyo glTF) oltre a rete stradale estesa
-- Texture reali su terreno/strade e illuminazione dinamica
-- Meccaniche avanzate: accelerazione progressiva, freno, nitro, 3 camere, punteggio guida
-- UI/HUD avanzata con impostazioni, limite FPS, densità traffico/pedoni, toggle touch
-- Bottone per chiudere il pannello impostazioni
-- Ottimizzazione browser telefono con comandi touch
+A full Kotlin Android video editor app using MVVM, ExoPlayer preview, and FFmpegKit local processing.
 
-## Avvio server locale
+## Tech Stack
+- Kotlin
+- Min SDK 29
+- Target/Compile SDK 34 (Android 14)
+- MVVM (ViewModel + Repository)
+- Material Design 3
+- ExoPlayer (Media3)
+- FFmpegKit (`com.arthenica:ffmpeg-kit-full-gpl:6.0-2`)
 
+## Features
+- Import videos from gallery/media picker
+- Trim video by start/end seconds
+- Compress video
+- Merge multiple videos
+- Export processed video to device storage (MediaStore)
+- Processing state and status messages
+
+## Project Structure
+- `MainActivity` - Entry point and permission handling
+- `EditorActivity` - Editor UI, playback preview, and actions
+- `FFmpegHelper` - FFmpeg command execution wrapper
+- `VideoRepository` - URI/file handling and export logic
+- `EditorViewModel` - MVVM state + processing workflow
+
+## Build
 ```bash
-node server.js
+./gradlew :app:assembleDebug
 ```
 
-Apri su:
-
-- http://localhost:5173
-
-## Note
-
-Gli asset 3D e texture vengono caricati via URL esterni (CDN/repository pubblici), quindi serve connessione internet.
+> Note: Requires Android SDK + Java runtime compatible with Android Gradle Plugin.
